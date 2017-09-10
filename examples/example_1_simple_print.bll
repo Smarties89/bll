@@ -1,0 +1,2 @@
+on print msg output "print('$msg')"
+put print "hello world"

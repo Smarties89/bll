@@ -1,0 +1,4 @@
+on print msg do "print('$msg')"
+on myprinter do print "hello world"
+put myprinter "hello world"
+
