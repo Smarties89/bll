@@ -86,7 +86,7 @@ class BllInterpreter(Scanner):
         while True:
             token = self.read()
             if token[0] == 'string':
-                # Using eval to avoid "double" string
+                # Using eval to avoid string in a string problem
                 parameters.append(eval(token[1]))
             elif token[0] == None:
                 break
@@ -95,13 +95,10 @@ class BllInterpreter(Scanner):
 
         return parameters
 
-
     def __read_until_newline_or_end(self):
         read = []
         while True:
             token = self.read()
-            #if token[0] == 'string':
-            #    token = (token[0], eval(token[1]))
             if token[0] is None or token[0] == 'newline':
                 break
             read.append(token[1])
