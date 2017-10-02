@@ -1,9 +1,0 @@
-#!/bin/bash
-
-
-function ,bll {
-	workon bll
-	cd $HOME/Documents/potentialprojects/bll
-
-	export r="./bll.py examples/example_1_simple_print.bll"
-}
